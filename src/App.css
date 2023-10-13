@@ -1,0 +1,16 @@
+#root {
+  width: 100%;
+  margin-top: 10px;
+  background-image: url('./assets/bd-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.image{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
