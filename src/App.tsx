@@ -5,7 +5,7 @@ import ImageCard from './components/Card'
 import room from './assets/Room-1.jpg'
 import breakfast from './assets/Breakfast.jpg'
 import view from './assets/drink.jpg'
-import { Box, TextField, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 function App() {
 
   return (
