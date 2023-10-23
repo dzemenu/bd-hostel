@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
 const pages = ["Rooms", "Reservation", "travel"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Shuttle", "Tour", "Lobby", "Market place"];
 
 function MenuBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(

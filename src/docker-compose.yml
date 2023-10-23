@@ -1,0 +1,38 @@
+version: "3.1"
+services:
+  odoo:
+    #image: odoo_with_panda:13.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "8072:8072"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./configurations/dev/config:/etc/odoo
+      - ./custom:/mnt/extra-addons
+      - ./db_auto_backup:/home/db_auto_backup
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=myodoo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "2345:5432"
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:
