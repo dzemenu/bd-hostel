@@ -26,12 +26,12 @@ function App() {
 </Typography>
       
     </Box>
-     <div className='image'>
+     <Box className='image' sx={{ flexDirection: { xs: 'column', md: 'row' },}}>
      <ImageCard imageSrc={room} title='Room'/>
      <ImageCard imageSrc={breakfast}title='Breakfast'/>
      <ImageCard imageSrc={view}title='View'/>
-     </div>
-     <div className='footer'>
+     </Box>
+     <Box className='footer'sx={{ flexDirection: { xs: 'column', md: 'row' },}}>
  <div className="footer-items">
   <h2>Address</h2>
   <h3>Bahirdar kebele 16</h3>
@@ -53,7 +53,7 @@ function App() {
   <h3>Tour guide</h3>
 
  </div>
-     </div>
+     </Box>
      
     </main>
   )
